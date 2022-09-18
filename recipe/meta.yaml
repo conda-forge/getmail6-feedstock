@@ -1,5 +1,5 @@
 {% set name = "getmail6" %}
-{% set version = "6.18.9" %}
+{% set version = "6.18.10" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 1dda163d20d7c67571d66234d1749e2209bca8cbcb7b944a2381837a82b88661
+  sha256: 0e5617cfa2cc87c5b259634f59f5728df3b2568a92caa564767e256f79866ad6
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
   skip: true  # [win]
 
 requirements:
@@ -34,7 +34,7 @@ test:
 
 about:
   home: https://getmail6.org/
-  summary: 'based on getmail 5.14, with adaptations for python 3'
+  summary: based on getmail 5.14, with adaptations for python 3
   description: |
     getmail6 is a flexible, extensible mail retrieval system with support 
     for POP3, IMAP4, SSL variants of both, maildirs, mboxrd files, 
