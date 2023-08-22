@@ -1,5 +1,5 @@
 {% set name = "getmail6" %}
-{% set version = "6.18.12" %}
+{% set version = "6.18.13" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/{{ name }}/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 419dc11184b147ef4daac2ec9f136b1b37e6450e2f44099629a6b7650deb044a
+  sha256: 977a8fbf63494b6278c30f225c7bfbc7cbdfdffddbd2f29fcd887dfb6ce0d509
 
 build:
   script: {{ PYTHON }} -m pip install . -vv
