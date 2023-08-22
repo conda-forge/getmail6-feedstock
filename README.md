@@ -1,11 +1,11 @@
-About getmail6
-==============
+About getmail6-feedstock
+========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/getmail6-feedstock/blob/main/LICENSE.txt)
 
 Home: https://getmail6.org/
 
 Package license: GPL-2.0-or-later
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/getmail6-feedstock/blob/main/LICENSE.txt)
 
 Summary: based on getmail 5.14, with adaptations for python 3
 
