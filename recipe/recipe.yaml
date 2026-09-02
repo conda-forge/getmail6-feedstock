@@ -1,0 +1,55 @@
+schema_version: 1
+
+context:
+  name: getmail6
+  version: "6.20.01"
+
+package:
+  name: ${{ name|lower }}
+  version: ${{ version }}
+
+source:
+  url: https://github.com/${{ name }}/${{ name }}/archive/v${{ version }}.tar.gz
+  sha256: d18915005052c8a065336ccc41b12148d40d4524a0ce2e8dc973b033f9b3cb14
+
+build:
+  number: 1
+  skip: win
+  script: ${{ PYTHON }} -m pip install . -vv
+
+requirements:
+  host:
+    - python
+    - pip
+    - setuptools
+  run:
+    - python
+
+tests:
+  - requirements:
+      run:
+        - pip
+    script:
+      - pip check
+      - getmail --help
+      - getmail_fetch --help
+      - getmail_maildir --help
+      - getmail_mbox --help
+      - getmail-gmail-xoauth-tokens --help
+
+about:
+  summary: based on getmail 5.14, with adaptations for python 3
+  description: |
+    getmail6 is a flexible, extensible mail retrieval system with support
+    for POP3, IMAP4, SSL variants of both, maildirs, mboxrd files,
+    external MDAs, arbitrary message filtering, single-user and
+    domain-mailboxes, and many other useful features.
+  license: GPL-2.0-or-later
+  license_file: docs/COPYING
+  homepage: https://getmail6.org/
+  repository: https://github.com/getmail6/getmail6
+  documentation: https://getmail6.org/
+
+extra:
+  recipe-maintainers:
+    - jan-janssen
