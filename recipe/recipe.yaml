@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: getmail6
-  version: "6.20.01"
+  version: "6.20.02"
 
 package:
   name: ${{ name|lower }}
@@ -10,10 +10,10 @@ package:
 
 source:
   url: https://github.com/${{ name }}/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: d18915005052c8a065336ccc41b12148d40d4524a0ce2e8dc973b033f9b3cb14
+  sha256: a544d99df546d0e48cea75ea00fdb6ee822c4c6fb771aa569efc31971ee845e2
 
 build:
-  number: 2
+  number: 0
   skip: win
   script: ${{ PYTHON }} -m pip install . -vv
 
