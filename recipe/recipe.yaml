@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: getmail6
-  version: "6.21.01"
+  version: "6.21.02"
 
 package:
   name: ${{ name|lower }}
@@ -10,7 +10,7 @@ package:
 
 source:
   url: https://github.com/${{ name }}/${{ name }}/archive/v${{ version }}.tar.gz
-  sha256: 1500951fe343879fa8bcb35188ef8e9333f9ac760529430c80fd2b59d53b6ddb
+  sha256: 97c4bb301ffb7ef42459a1e35d2673899c14ae3c4e80e862c85219561e0422c8
 
 build:
   number: 0
